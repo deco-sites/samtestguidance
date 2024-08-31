@@ -16,9 +16,9 @@
   },
   "mode": "light",
   "mainColors": {
-    "base-100": "#1D1B1B",
+    "base-100": "#ffffff",
     "primary": "#1D1B1B",
     "secondary": "#96031A",
-    "neutral": "#ffffff"
+    "neutral": "#FBFFFE"
   }
 }
