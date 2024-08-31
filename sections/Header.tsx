@@ -74,10 +74,10 @@ export default function Header() {
                 <Icon
                   id="ShoppingCart"
                   size={20}
-                  className="cursor-pointer"
+                  className="cursor-pointer text-neutral"
                   role="button"
                 />
-                <button>Login</button>
+                <button class='btn btn-sm btn-accent btn-link text-neutral'>Login</button>
               </div>
             </div>
           </div>
