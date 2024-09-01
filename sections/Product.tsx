@@ -8,15 +8,11 @@ import {
 import { useScript } from "deco/hooks/useScript.ts";
 import RadioButton from "site/components/ui/RadioButton.tsx";
 import AddToCartButton from "site/islands/features/Product/AddToCartButton.tsx";
+import { Product, SKU } from "site/Dtos/product.ts";
 
-interface ProductProps {
-    name: string;
-    price: number;
-    description: string;
-    sizes: string[];
-    images: string[];
+interface ProductProps extends Product {
+    selectedSku?: SKU;
     selectedImage?: string;
-    selectedSize?: string;
 }
 
 const AddUrlWhatsApp = () => {
@@ -24,7 +20,7 @@ const AddUrlWhatsApp = () => {
         `whatsapp://send?text=${globalThis.location.href}`;
 };
 
-export default function Product(props: ProductProps) {
+export default function Section(props: ProductProps) {
     const selectedImage = props.selectedImage ||
         props.images[0];
     return (
@@ -43,11 +39,11 @@ export default function Product(props: ProductProps) {
                                     image={image}
                                     selectedImage={selectedImage}
                                     ButtonProps={usePartialSection<
-                                        typeof Product
+                                        typeof Section
                                     >({
                                         props: {
                                             selectedImage: image,
-                                            selectedSize: props.selectedSize,
+                                            selectedSku: props.selectedSku,
                                         },
                                     })}
                                 />
@@ -57,7 +53,7 @@ export default function Product(props: ProductProps) {
                     <div className="space-y-6">
                         <ProductDetails
                             name={props.name}
-                            price={props.price}
+                            price={props.selectedSku?.price}
                             description={props.description}
                         />
 
@@ -66,24 +62,24 @@ export default function Product(props: ProductProps) {
                                 Tamanhos
                             </h3>
                             <fieldset className="flex gap-4">
-                                {props.sizes.map((size) => (
+                                {props.skus.map((sku) => (
                                     <div
-                                        key={size}
+                                        key={sku.id}
                                         className="flex items-center space-x-2"
                                     >
                                         <RadioButton
                                             RadioButtonProps={usePartialSection<
-                                                typeof Product
+                                                typeof Section
                                             >({
                                                 props: {
-                                                    selectedSize: size,
+                                                    selectedSku: sku,
                                                     selectedImage:
                                                         props.selectedImage,
                                                 },
                                             })}
                                             radioGroupName="size"
-                                            radioProperty={size}
-                                            text={size}
+                                            radioProperty={sku.size}
+                                            text={sku.size}
                                         />
                                     </div>
                                 ))}
@@ -99,14 +95,12 @@ export default function Product(props: ProductProps) {
                             </button> */
                             }
                             <AddToCartButton
-                                selectedSize={props.selectedSize}
-                                Product={{
-                                    id: 111,
-                                    image: props.images[0],
-                                    name: props.name,
-                                    price: props.price,
-                                    quantity: 1,
-                                }}
+                                id={props.selectedSku?.id!}
+                                image={props.images[0]}
+                                name={props.name}
+                                price={props.selectedSku?.price!}
+                                quantity={1}
+                                size={props.selectedSku?.size!}
                             />
                             <a
                                 id="whatsapp_button"

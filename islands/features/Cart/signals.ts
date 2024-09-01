@@ -1,14 +1,40 @@
 import { signal } from "@preact/signals";
 
 export interface CartItem {
-    id: number;
+    id: string;
     name: string;
     price: number;
     quantity: number;
     image: string;
+    size: string;
 }
 
-const cartItemSignal = signal<CartItem[]>([]);
+const cartItemSignal = signal<CartItem[]>([
+    {
+        id: "vintage_blusa_medio",
+        size: "Médio",
+        name: "Vintage T-Shirt",
+        price: 29.99,
+        quantity: 2,
+        image: "/placeholder.svg?height=100&width=100",
+    },
+    {
+        id: "denin_jeans_pequeno",
+        size: "Pequeno",
+        name: "Denim Jeans",
+        price: 59.99,
+        quantity: 1,
+        image: "/placeholder.svg?height=100&width=100",
+    },
+    {
+        id: "sneakers_grande",
+        size: "Grande",
+        name: "Running Sneakers",
+        price: 89.99,
+        quantity: 1,
+        image: "/placeholder.svg?height=100&width=100",
+    },
+]);
 
 const addItem = (item: CartItem) => {
     if (cartItemSignal.value.some((u) => u.id === item.id)) {
@@ -18,7 +44,7 @@ const addItem = (item: CartItem) => {
     cartItemSignal.value = [...cartItemSignal.value, item];
 };
 
-const updateQuantity = (id: number, change: number) => {
+const updateQuantity = (id: string, change: number) => {
     console.log(id, cartItemSignal.value);
     cartItemSignal.value = cartItemSignal.value.map((item) =>
         item.id === id
@@ -27,7 +53,7 @@ const updateQuantity = (id: number, change: number) => {
     );
 };
 
-const removeItem = (id: number) => {
+const removeItem = (id: string) => {
     cartItemSignal.value = cartItemSignal.value.filter((item) =>
         item.id !== id
     );

@@ -4,9 +4,7 @@ import {
     CartOpenFunctionalities,
 } from "site/islands/features/Cart/signals.ts";
 
-interface AddToCartButtonProps {
-    selectedSize?: string;
-    Product: CartItem;
+interface AddToCartButtonProps extends CartItem {
 }
 
 const { addItem } = CartFunctionalities;
@@ -16,9 +14,9 @@ export default function AddToCartButton(props: AddToCartButtonProps) {
     return (
         <button
             className="btn btn-sm btn-secondary"
-            disabled={!props.selectedSize}
+            disabled={!props.id}
             onClick={() => {
-                addItem(props.Product);
+                addItem(props);
                 openDrawer();
             }}
         >

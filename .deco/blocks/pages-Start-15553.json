@@ -23,6 +23,24 @@
         "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/6f4cd87a-dc9f-440e-8544-891ab45207fa/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_2_7fd582b630008aa9583b7abfd784cab9.webp",
         "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/0fa699f1-62c8-4eaf-9845-935c3946c9f3/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_3_6f1dd5c4e981fffaaab06b8ef2b09d4b.webp",
         "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/35fbdadc-ceb7-42ed-b4b8-de838aa0149e/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_4_7ef47f68eb562927fd799a76af998118.webp"
+      ],
+      "id": "camisa_galo",
+      "skus": [
+        {
+          "id": "camisa_galo_pequeno",
+          "size": "Pequeno",
+          "price": 40
+        },
+        {
+          "id": "camisa_galo_m",
+          "size": "Médio",
+          "price": 90
+        },
+        {
+          "id": "camisa_galo_grande",
+          "size": "Grande",
+          "price": 200
+        }
       ]
     },
     {

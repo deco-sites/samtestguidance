@@ -2,13 +2,14 @@ import { formatToCurrency } from "../../utils/currency.ts";
 import Icon from "site/components/ui/Icon.tsx";
 
 interface CartItemProps {
-    id: number;
+    id: string;
     imageSrc: string;
     name: string;
     price: number;
-    updateQuantity: (id: number, by: number) => void;
-    removeItem: (id: number) => void;
+    updateQuantity: (id: string, by: number) => void;
+    removeItem: (id: string) => void;
     quantity: number;
+    size:string
 }
 
 export default function CartItem(props: CartItemProps) {
@@ -24,6 +25,9 @@ export default function CartItem(props: CartItemProps) {
                     <h3 className="text-lg font-medium">
                         {props.name}
                     </h3>
+                    <p className="text-sm text-muted-foreground">
+                        Tamanho: {props.size}. 
+                    </p>
                     <p className="text-sm text-muted-foreground">
                         {formatToCurrency(props.price)} cada
                     </p>

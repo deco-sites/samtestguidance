@@ -16,7 +16,6 @@ export default function Cart() {
             style={{
                 position: "fixed",
                 top: "64px",
-
                 border: "1px solid black",
                 backgroundColor: "white",
                 zIndex: 9999,
@@ -35,6 +34,7 @@ export default function Cart() {
                     <ul>
                         {cartItemsSignal.value.map((item) => (
                             <CartItem
+                                size={item.size}
                                 id={item.id}
                                 imageSrc={item.image}
                                 name={item.name}
