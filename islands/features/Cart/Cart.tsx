@@ -25,7 +25,7 @@ export function Cart() {
     return (
         <div
             ref={cartRef}
-            className={`rounded overflow-hidden bg-neutral top-[77px] fixed w-full sm:w-3/4 md:w-1/2 lg:w-1/2 transition-all ${
+            className={`border-primary border-2 rounded overflow-hidden bg-neutral top-[77px] fixed w-full sm:w-3/4 md:w-1/2 lg:w-1/2 transition-all ${
                 CartDraweOpenSignal.value ? "right-0" : "-right-full"
             }`}
         >
