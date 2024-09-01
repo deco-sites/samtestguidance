@@ -4,11 +4,11 @@
     "jsonLDs": [],
     "noIndexing": false,
     "description": "Melhores Adereços de Esportes do Brasil",
-    "titleTemplate": "%s | deco.cx",
-    "descriptionTemplate": "%s | deco.cx",
     "title": "Sports Gear",
     "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/4586bb04-203a-4b28-817e-da6adafffdb7/sports-shop-icon-vector.jpg",
-    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/de7db7aa-0c81-4ca3-95c1-a232cea5b520/sports-equipment-icon-set-vector-260nw-1356133877.webp"
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/de7db7aa-0c81-4ca3-95c1-a232cea5b520/sports-equipment-icon-set-vector-260nw-1356133877.webp",
+    "titleTemplate": "%s | Sports Gear",
+    "descriptionTemplate": "%s"
   },
   "global": [
     {

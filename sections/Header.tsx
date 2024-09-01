@@ -4,7 +4,7 @@ import {
   MobileDrawer,
 } from "site/features/Header/islands.ts";
 import Image from "apps/website/components/Image.tsx";
-import { links } from "../features/Header/links.ts";
+import { links } from "site/features/Header/links.ts";
 
 const onScroll = () => {
   let lastScrollY = globalThis.scrollY;
