@@ -13,14 +13,7 @@ const { closeDrawer, CartDraweOpenSignal } = CartOpenFunctionalities;
 export default function Cart() {
     return (
         <div
-            style={{
-                position: "fixed",
-                top: "64px",
-                border: "1px solid black",
-                backgroundColor: "white",
-                zIndex: 9999,
-            }}
-            className={`w-full sm:w-3/4 md:w-1/2 lg:w-1/2 transition-all ${
+            className={`rounded overflow-hidden bg-neutral top-[77px] fixed w-full sm:w-3/4 md:w-1/2 lg:w-1/2 transition-all ${
                 CartDraweOpenSignal.value ? "right-0" : "-right-full"
             }`}
         >
