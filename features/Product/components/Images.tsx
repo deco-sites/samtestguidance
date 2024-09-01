@@ -36,7 +36,7 @@ export function ImageMiniature(props: ImageMiniatureProps) {
             }`}
         >
             <Image
-                width={30}
+                width={100}
                 height={100}
                 src={props.image}
                 alt={props.alt}
