@@ -5,7 +5,7 @@ interface ProductDetailsProps {
     description: string;
 }
 
-export default function ProductDetails(props: ProductDetailsProps) {
+export function ProductDetails(props: ProductDetailsProps) {
     return (
         <div>
             <h1 className="text-3xl font-bold">{props.name}</h1>

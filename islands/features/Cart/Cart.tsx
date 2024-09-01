@@ -1,16 +1,21 @@
-import { CartFunctionalities, CartOpenFunctionalities } from "./signals.ts";
-import { formatToCurrency } from "../../../utils/currency.ts";
-import CartItem from "site/features/Cart/CartItem.tsx";
-import CartHeader from "site/features/Cart/CartHeader.tsx";
-import EmptyCart from "site/features/Cart/EmptyCart.tsx";
-import CartSubTotal from "site/features/Cart/CartSubTotal.tsx";
+import {
+    CartDrawerOpenCloseHandler,
+    CartItemStateManager,
+} from "./signals.ts";
+import { formatToCurrency } from "site/utils/currency.ts";
+import {
+    CartHeader,
+    CartItem,
+    CartSubTotal,
+    EmptyCart,
+} from "site/features/Cart/components/index.ts";
 
 const { removeItem, calculateSubTotal, updateQuantity, cartItemsSignal } =
-    CartFunctionalities;
+    CartItemStateManager;
 
-const { closeDrawer, CartDraweOpenSignal } = CartOpenFunctionalities;
+const { closeDrawer, CartDraweOpenSignal } = CartDrawerOpenCloseHandler;
 
-export default function Cart() {
+export function Cart() {
     return (
         <div
             className={`rounded overflow-hidden bg-neutral top-[77px] fixed w-full sm:w-3/4 md:w-1/2 lg:w-1/2 transition-all ${

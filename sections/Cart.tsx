@@ -1,4 +1,4 @@
-import Cart from "site/islands/features/Cart/Cart.tsx";
+import { Cart } from "site/features/Cart/islands.ts";
 
 export default function Section() {
     return <Cart />;

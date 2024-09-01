@@ -1,13 +1,15 @@
-import ProductDetails from "site/features/Product/components/Details.tsx";
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
+import RadioButton from "site/components/ui/RadioButton.tsx";
+import { Product, SKU } from "site/Dtos/product.ts";
+import {
+    AddToCartButton,
+    ShareToWhatsAppButton,
+} from "site/features/Product/islands.ts";
 import {
     ImageMiniature,
+    ProductDetails,
     SelectedImage,
-} from "site/features/Product/components/Images.tsx";
-import RadioButton from "site/components/ui/RadioButton.tsx";
-import AddToCartButton from "site/islands/features/Product/AddToCartButton.tsx";
-import { Product, SKU } from "site/Dtos/product.ts";
-import ShareToWhatsAppButton from "site/islands/features/Product/ShareToWhatsAppButton.tsx";
+} from "site/features/Product/components/index.ts";
 
 interface ProductProps extends Product {
     selectedSku?: SKU;

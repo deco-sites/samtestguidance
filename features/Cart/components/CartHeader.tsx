@@ -4,7 +4,7 @@ interface CartContainerProps {
     onClickCloseCart: () => void;
 }
 
-export default function CartHeader(props: CartContainerProps) {
+export function CartHeader(props: CartContainerProps) {
     return (
         <div>
             <div className="bg-primary flex items-center justify-between p-4">

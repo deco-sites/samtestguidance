@@ -1,10 +1,11 @@
-import { footerSections } from "site/features/Footer/sections.ts";
 import {
   FooterTitle,
   FootterLink,
   NewsletterSection,
   SubFooterSection,
-} from "site/features/Footer/components.tsx";
+} from "site/features/Footer/components/index.ts";
+
+import { footerSections } from "site/features/Footer/sections.ts";
 
 function Footer() {
   return (

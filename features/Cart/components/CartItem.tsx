@@ -1,4 +1,4 @@
-import { formatToCurrency } from "../../utils/currency.ts";
+import { formatToCurrency } from "../../../utils/currency.ts";
 import Icon from "site/components/ui/Icon.tsx";
 
 interface CartItemProps {
@@ -9,10 +9,10 @@ interface CartItemProps {
     updateQuantity: (id: string, by: number) => void;
     removeItem: (id: string) => void;
     quantity: number;
-    size:string
+    size: string;
 }
 
-export default function CartItem(props: CartItemProps) {
+export function CartItem(props: CartItemProps) {
     return (
         <li>
             <div className="p-4 flex flex-wrap md:flex-nowrap items-center">
@@ -26,7 +26,7 @@ export default function CartItem(props: CartItemProps) {
                         {props.name}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                        Tamanho: {props.size}. 
+                        Tamanho: {props.size}.
                     </p>
                     <p className="text-sm text-muted-foreground">
                         {formatToCurrency(props.price)} cada

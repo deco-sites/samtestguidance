@@ -1,16 +1,16 @@
 import {
-    CartFunctionalities,
-    CartItem,
-    CartOpenFunctionalities,
-} from "site/islands/features/Cart/signals.ts";
+    CartDrawerOpenCloseHandler,
+    CartItemStateManager,
+} from "../Cart/signals.ts";
+import { CartItem } from "site/features/Cart/types.ts";
 
 interface AddToCartButtonProps extends CartItem {
 }
 
-const { addItem } = CartFunctionalities;
-const { openDrawer } = CartOpenFunctionalities;
+const { addItem } = CartItemStateManager;
+const { openDrawer } = CartDrawerOpenCloseHandler;
 
-export default function AddToCartButton(props: AddToCartButtonProps) {
+export function AddToCartButton(props: AddToCartButtonProps) {
     return (
         <button
             className="btn btn-sm btn-secondary"

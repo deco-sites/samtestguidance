@@ -1,6 +1,8 @@
 import { useScript } from "deco/hooks/useScript.ts";
-import HeaderCartButton from "site/islands/features/Header/HeaderCartButton.tsx";
-import Drawer from "site/islands/features/Header/MobileDrawer.tsx";
+import {
+  HeaderCartButton,
+  MobileDrawer,
+} from "site/features/Header/islands.ts";
 import Image from "apps/website/components/Image.tsx";
 import { links } from "../features/Header/links.ts";
 
@@ -58,7 +60,7 @@ export default function Header(props: HeaderProps) {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Drawer />
+                <MobileDrawer />
                 <div>
                   <Image
                     src={props.iconUrl}

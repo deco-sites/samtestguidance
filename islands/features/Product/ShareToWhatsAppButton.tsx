@@ -1,6 +1,6 @@
 import Icon from "site/components/ui/Icon.tsx";
 
-export default function ShareToWhatsAppButton() {
+export function ShareToWhatsAppButton() {
     return (
         <a
             id="whatsapp_button"

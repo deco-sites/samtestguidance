@@ -4,11 +4,14 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $features_Cart_Cart from "./islands/features/Cart/Cart.tsx";
+import * as $features_Cart_index from "./islands/features/Cart/index.ts";
 import * as $features_Cart_signals from "./islands/features/Cart/signals.ts";
 import * as $features_Header_HeaderCartButton from "./islands/features/Header/HeaderCartButton.tsx";
 import * as $features_Header_MobileDrawer from "./islands/features/Header/MobileDrawer.tsx";
+import * as $features_Header_index from "./islands/features/Header/index.ts";
 import * as $features_Product_AddToCartButton from "./islands/features/Product/AddToCartButton.tsx";
 import * as $features_Product_ShareToWhatsAppButton from "./islands/features/Product/ShareToWhatsAppButton.tsx";
+import * as $features_Product_index from "./islands/features/Product/index.ts";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -17,14 +20,17 @@ const manifest = {
   },
   islands: {
     "./islands/features/Cart/Cart.tsx": $features_Cart_Cart,
+    "./islands/features/Cart/index.ts": $features_Cart_index,
     "./islands/features/Cart/signals.ts": $features_Cart_signals,
     "./islands/features/Header/HeaderCartButton.tsx":
       $features_Header_HeaderCartButton,
     "./islands/features/Header/MobileDrawer.tsx": $features_Header_MobileDrawer,
+    "./islands/features/Header/index.ts": $features_Header_index,
     "./islands/features/Product/AddToCartButton.tsx":
       $features_Product_AddToCartButton,
     "./islands/features/Product/ShareToWhatsAppButton.tsx":
       $features_Product_ShareToWhatsAppButton,
+    "./islands/features/Product/index.ts": $features_Product_index,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

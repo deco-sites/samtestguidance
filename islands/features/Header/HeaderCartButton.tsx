@@ -1,10 +1,10 @@
-import Icon from "../../../components/ui/Icon.tsx";
-import { CartOpenFunctionalities } from "site/islands/features/Cart/signals.ts";
+import Icon from "site/components/ui/Icon.tsx";
+import { CartDrawerOpenCloseHandler } from "../Cart/signals.ts";
 
 const { openDrawer, closeDrawer, CartDraweOpenSignal } =
-    CartOpenFunctionalities;
+    CartDrawerOpenCloseHandler;
 
-export default function HeaderCartButton() {
+export function HeaderCartButton() {
     return (
         <Icon
             onClick={() => {
