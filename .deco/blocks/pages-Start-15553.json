@@ -2,7 +2,8 @@
   "path": "/camisa_galo",
   "sections": [
     {
-      "__resolveType": "site/sections/Header.tsx"
+      "__resolveType": "site/sections/Header.tsx",
+      "iconUrl": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/59e609e7-8245-400e-b95a-4f8686eccebf/sports-shop-icon-vector.jpg"
     },
     {
       "__resolveType": "site/sections/Cart.tsx"

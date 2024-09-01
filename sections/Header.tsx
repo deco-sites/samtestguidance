@@ -1,6 +1,8 @@
-import { JSX } from "preact";
 import { useScript } from "deco/hooks/useScript.ts";
 import HeaderCartButton from "site/islands/features/Header/HeaderCartButton.tsx";
+import Drawer from "site/islands/features/Header/MobileDrawer.tsx";
+import Image from "apps/website/components/Image.tsx";
+import { links } from "../features/Header/links.ts";
 
 const onScroll = () => {
   let lastScrollY = globalThis.scrollY;
@@ -42,12 +44,10 @@ const onScroll = () => {
   globalThis.addEventListener("scroll", onScroll);
 };
 
-export default function Header() {
-  const defaultLinks: (JSX.IntrinsicElements["a"] & { key: string })[] = [
-    { href: "#", children: "Coleções", key: "collections" },
-    { href: "#", children: "Home", key: "home" },
-    { href: "#", children: "Promoções", key: "promotions" },
-  ];
+interface HeaderProps {
+  iconUrl: string;
+}
+export default function Header(props: HeaderProps) {
   return (
     <>
       <div style={{ height: "64px" }}>
@@ -57,11 +57,19 @@ export default function Header() {
         >
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
-              <div className="text-2xl font-bold text-primary">
-                Logo
+              <div className="flex items-center gap-2">
+                <Drawer />
+                <div>
+                  <Image
+                    src={props.iconUrl}
+                    width={40}
+                    height={40}
+                    className="rounded-full"
+                  />
+                </div>
               </div>
               <nav className="hidden md:flex space-x-4">
-                {defaultLinks?.map((link) => {
+                {links?.map((link) => {
                   return (
                     <a
                       {...link}

@@ -6,6 +6,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $features_Cart_Cart from "./islands/features/Cart/Cart.tsx";
 import * as $features_Cart_signals from "./islands/features/Cart/signals.ts";
 import * as $features_Header_HeaderCartButton from "./islands/features/Header/HeaderCartButton.tsx";
+import * as $features_Header_MobileDrawer from "./islands/features/Header/MobileDrawer.tsx";
 import * as $features_Product_AddToCartButton from "./islands/features/Product/AddToCartButton.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -18,6 +19,7 @@ const manifest = {
     "./islands/features/Cart/signals.ts": $features_Cart_signals,
     "./islands/features/Header/HeaderCartButton.tsx":
       $features_Header_HeaderCartButton,
+    "./islands/features/Header/MobileDrawer.tsx": $features_Header_MobileDrawer,
     "./islands/features/Product/AddToCartButton.tsx":
       $features_Product_AddToCartButton,
   },
