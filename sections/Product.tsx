@@ -43,7 +43,12 @@ export default function Product(props: ProductProps) {
                                     selectedImage={selectedImage}
                                     ButtonProps={usePartialSection<
                                         typeof Product
-                                    >({ props: { selectedImage: image } })}
+                                    >({
+                                        props: {
+                                            selectedImage: image,
+                                            selectedSize: props.selectedSize,
+                                        },
+                                    })}
                                 />
                             ))}
                         </div>
@@ -69,7 +74,11 @@ export default function Product(props: ProductProps) {
                                             RadioButtonProps={usePartialSection<
                                                 typeof Product
                                             >({
-                                                props: { selectedSize: size },
+                                                props: {
+                                                    selectedSize: size,
+                                                    selectedImage:
+                                                        props.selectedImage,
+                                                },
                                             })}
                                             radioGroupName="size"
                                             radioProperty={size}
