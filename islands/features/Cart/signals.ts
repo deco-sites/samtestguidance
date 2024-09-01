@@ -8,29 +8,7 @@ export interface CartItem {
     image: string;
 }
 
-const cartItemSignal = signal<CartItem[]>([
-    {
-        id: 1,
-        name: "Vintage T-Shirt",
-        price: 29.99,
-        quantity: 2,
-        image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-        id: 2,
-        name: "Denim Jeans",
-        price: 59.99,
-        quantity: 1,
-        image: "/placeholder.svg?height=100&width=100",
-    },
-    {
-        id: 3,
-        name: "Running Sneakers",
-        price: 89.99,
-        quantity: 1,
-        image: "/placeholder.svg?height=100&width=100",
-    },
-]);
+const cartItemSignal = signal<CartItem[]>([]);
 
 const addItem = (item: CartItem) => {
     if (cartItemSignal.value.some((u) => u.id === item.id)) {
