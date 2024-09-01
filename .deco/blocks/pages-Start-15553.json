@@ -6,6 +6,9 @@
       "__resolveType": "site/sections/Header.tsx"
     },
     {
+      "__resolveType": "site/sections/Cart.tsx"
+    },
+    {
       "__resolveType": "site/sections/Product.tsx",
       "name": "Camisa do Galo",
       "price": 230,

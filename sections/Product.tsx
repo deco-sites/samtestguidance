@@ -7,6 +7,7 @@ import {
 } from "../features/Product/components/Images.tsx";
 import { useScript } from "deco/hooks/useScript.ts";
 import RadioButton from "site/components/ui/RadioButton.tsx";
+import AddToCartButton from "site/islands/features/Product/AddToCartButton.tsx";
 
 interface ProductProps {
     name: string;
@@ -89,12 +90,24 @@ export default function Product(props: ProductProps) {
                             </fieldset>
                         </div>
                         <div className="flex items-center gap-2 w-full">
-                            <button
+                            {
+                                /* <button
                                 className="btn btn-sm btn-secondary"
                                 disabled={!props.selectedSize}
                             >
                                 Adicionar ao Carrinho
-                            </button>
+                            </button> */
+                            }
+                            <AddToCartButton
+                                selectedSize={props.selectedSize}
+                                Product={{
+                                    id: 111,
+                                    image: props.images[0],
+                                    name: props.name,
+                                    price: props.price,
+                                    quantity: 1,
+                                }}
+                            />
                             <a
                                 id="whatsapp_button"
                                 href="#"

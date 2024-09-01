@@ -1,6 +1,6 @@
 import { JSX } from "preact";
 import { useScript } from "deco/hooks/useScript.ts";
-import Icon from "../components/ui/Icon.tsx";
+import HeaderCartButton from "site/islands/features/Header/HeaderCartButton.tsx";
 
 const onScroll = () => {
   let lastScrollY = globalThis.scrollY;
@@ -71,13 +71,10 @@ export default function Header() {
                 })}
               </nav>
               <div className="flex items-center gap-2">
-                <Icon
-                  id="ShoppingCart"
-                  size={20}
-                  className="cursor-pointer text-neutral"
-                  role="button"
-                />
-                <button class='btn btn-sm btn-accent btn-link text-neutral'>Login</button>
+                <HeaderCartButton />
+                <button class="btn btn-sm btn-accent btn-link text-neutral">
+                  Login
+                </button>
               </div>
             </div>
           </div>

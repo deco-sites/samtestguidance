@@ -3,14 +3,24 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-
+import * as $features_Cart_Cart from "./islands/features/Cart/Cart.tsx";
+import * as $features_Cart_signals from "./islands/features/Cart/signals.ts";
+import * as $features_Header_HeaderCartButton from "./islands/features/Header/HeaderCartButton.tsx";
+import * as $features_Product_AddToCartButton from "./islands/features/Product/AddToCartButton.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
   },
-  islands: {},
+  islands: {
+    "./islands/features/Cart/Cart.tsx": $features_Cart_Cart,
+    "./islands/features/Cart/signals.ts": $features_Cart_signals,
+    "./islands/features/Header/HeaderCartButton.tsx":
+      $features_Header_HeaderCartButton,
+    "./islands/features/Product/AddToCartButton.tsx":
+      $features_Product_AddToCartButton,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
