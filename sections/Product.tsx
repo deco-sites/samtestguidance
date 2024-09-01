@@ -3,7 +3,7 @@ import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import {
     ImageMiniature,
     SelectedImage,
-} from "../features/Product/components/Images.tsx";
+} from "site/features/Product/components/Images.tsx";
 import RadioButton from "site/components/ui/RadioButton.tsx";
 import AddToCartButton from "site/islands/features/Product/AddToCartButton.tsx";
 import { Product, SKU } from "site/Dtos/product.ts";

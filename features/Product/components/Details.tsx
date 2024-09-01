@@ -1,4 +1,4 @@
-import { formatToCurrency } from "../../../utils/currency.ts";
+import { formatToCurrency } from "site/utils/currency.ts";
 interface ProductDetailsProps {
     name: string;
     price?: number;
