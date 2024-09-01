@@ -1,5 +1,5 @@
 {
-  "name": "home",
+  "name": "Home",
   "path": "/",
   "sections": [
     {
@@ -10,21 +10,7 @@
       "__resolveType": "site/sections/Cart.tsx"
     },
     {
-      "__resolveType": "site/sections/Product.tsx",
-      "name": "Camisa do Galo",
-      "price": 230,
-      "description": "Uma camisa para o torcedor do timão",
-      "sizes": [
-        "Grande",
-        "Médio",
-        "Pequeno"
-      ],
-      "images": [
-        "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/cf71e2d2-9efc-4aa9-a833-5a9eb49b54ca/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_1_e718a1b25d6330c22c6f0b41d75c0424.webp",
-        "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/6f4cd87a-dc9f-440e-8544-891ab45207fa/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_2_7fd582b630008aa9583b7abfd784cab9.webp",
-        "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/0fa699f1-62c8-4eaf-9845-935c3946c9f3/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_3_6f1dd5c4e981fffaaab06b8ef2b09d4b.webp",
-        "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/35fbdadc-ceb7-42ed-b4b8-de838aa0149e/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_4_7ef47f68eb562927fd799a76af998118.webp"
-      ]
+      "__resolveType": "site/sections/Home.tsx"
     },
     {
       "__resolveType": "Footer"
