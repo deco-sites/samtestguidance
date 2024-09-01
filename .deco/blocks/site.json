@@ -3,12 +3,12 @@
     "type": "website",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
+    "description": "Melhores Adereços de Esportes do Brasil",
     "titleTemplate": "%s | deco.cx",
     "descriptionTemplate": "%s | deco.cx",
-    "title": "Start",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/40cc7da0-93d3-4215-9c2a-04b2f86b0a47",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/22c99167-0018-484f-8b0d-4295a7d771f2"
+    "title": "Sports Gear",
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/4586bb04-203a-4b28-817e-da6adafffdb7/sports-shop-icon-vector.jpg",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/de7db7aa-0c81-4ca3-95c1-a232cea5b520/sports-equipment-icon-set-vector-260nw-1356133877.webp"
   },
   "global": [
     {
