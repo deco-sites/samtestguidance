@@ -1,5 +1,6 @@
 {
-  "path": "/camisa_galo",
+  "name": "home",
+  "path": "/",
   "sections": [
     {
       "__resolveType": "site/sections/Header.tsx"
@@ -28,17 +29,22 @@
       "__resolveType": "Footer"
     },
     {
-      "__resolveType": "website/sections/Seo/SeoV2.tsx",
-      "title": "Camisa do Galo",
-      "description": "Uma camisa do galo pra voce que torce pro timão",
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/69ea2f20-e523-42f2-a3a9-6a182342c3c6/90_camisa_atletico_mineiro_galo_asphalt_torcedor_all_black_masculina_2061_1_e718a1b25d6330c22c6f0b41d75c0424.webp",
-      "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/59e609e7-8245-400e-b95a-4f8686eccebf/sports-shop-icon-vector.jpg",
-      "type": "website",
-      "jsonLDs": [
-        {}
-      ]
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "website/sections/Seo/SeoV2.tsx",
+        "title": "Home",
+        "description": "Home",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/893d5546-b7a1-4098-b346-3736815a82f2/sports-shop-icon-vector.jpg",
+        "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/samtestguidance/59e609e7-8245-400e-b95a-4f8686eccebf/sports-shop-icon-vector.jpg",
+        "jsonLDs": [
+          {}
+        ],
+        "type": "website"
+      }
     }
   ],
-  "__resolveType": "website/pages/Page.tsx",
-  "name": "Camisa do Galo"
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
 }
