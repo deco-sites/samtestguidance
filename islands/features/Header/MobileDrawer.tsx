@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "preact/hooks";
+import { useRef, useState } from "preact/hooks";
 import Icon from "site/components/ui/Icon.tsx";
 import { JSX } from "preact";
 import { links } from "site/features/Header/links.ts";
+import { useHandleClickOutside } from "site/hooks/useHandleClickOutside.ts";
 
 const DrawerLink = (props: JSX.IntrinsicElements["a"] & { key: string }) => {
     return (
@@ -18,21 +19,10 @@ export function MobileDrawer() {
     const [isOpen, setIsOpen] = useState(false);
     const drawerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const handleOutsideClick = (event: MouseEvent) => {
-            if (
-                drawerRef.current &&
-                !drawerRef.current.contains(event.target as Node)
-            ) {
-                setIsOpen(false);
-            }
-        };
-
-        document.addEventListener("mousedown", handleOutsideClick);
-        return () => {
-            document.removeEventListener("mousedown", handleOutsideClick);
-        };
-    }, []);
+    useHandleClickOutside({
+        ref: drawerRef,
+        onClickOutside: () => setIsOpen(false),
+    });
 
     return (
         <div className="relative md:hidden">

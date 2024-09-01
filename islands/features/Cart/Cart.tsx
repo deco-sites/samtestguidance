@@ -1,7 +1,4 @@
-import {
-    CartDrawerOpenCloseHandler,
-    CartItemStateManager,
-} from "./signals.ts";
+import { CartDrawerOpenCloseHandler, CartItemStateManager } from "./signals.ts";
 import { formatToCurrency } from "site/utils/currency.ts";
 import {
     CartHeader,
@@ -9,6 +6,8 @@ import {
     CartSubTotal,
     EmptyCart,
 } from "site/features/Cart/components/index.ts";
+import { useHandleClickOutside } from "site/hooks/useHandleClickOutside.ts";
+import { useRef } from "preact/hooks";
 
 const { removeItem, calculateSubTotal, updateQuantity, cartItemsSignal } =
     CartItemStateManager;
@@ -16,8 +15,16 @@ const { removeItem, calculateSubTotal, updateQuantity, cartItemsSignal } =
 const { closeDrawer, CartDraweOpenSignal } = CartDrawerOpenCloseHandler;
 
 export function Cart() {
+    const cartRef = useRef<HTMLDivElement>(null);
+
+    useHandleClickOutside({
+        ref: cartRef,
+        onClickOutside: () => closeDrawer(),
+    });
+
     return (
         <div
+            ref={cartRef}
             className={`rounded overflow-hidden bg-neutral top-[77px] fixed w-full sm:w-3/4 md:w-1/2 lg:w-1/2 transition-all ${
                 CartDraweOpenSignal.value ? "right-0" : "-right-full"
             }`}
