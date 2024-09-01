@@ -1,50 +1,28 @@
-# Start — deco.cx template 
-
-Welcome to your [deco.cx](https://deco.cx) site!
-
-## Usage
-
-1 - [Install deno](https://docs.deno.com/runtime/manual/getting_started/installation/)
+# Projeto teste Guidance 
 
 
-2 - Run the command
+
+## rodar o projeto em dev
+
+1 - [Instalar o Deno](https://docs.deno.com/runtime/manual/getting_started/installation/)
+
+
+2 - Rodar comando
 
 ```sh
 deno task start
 ```
 
-This will install all dependencies and start your project.
+Isso vai instalar as dependecias e inicializar o projeto.
 
-Access `http://localhost:8000` to see your site.
+Accessar `http://localhost:8000` para ver o site.
 
-## Recommended extensions (VSCode)
 
-- [Deno](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)
+### Url do projeto
+https://samtestguidance.deco.site
 
-- [Tailwind IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-## Dependencies
+### Arquitetura de Pastas
+Foi feita uma arquitetura de pastas para padronizar o projeto descrita no diagrama abaixo
 
-Keep your dependencies updated by running:
-
-```sh
-deno task update
-```
-
-## Help
-
-- 📚 [Docs](https://www.deco.cx/docs/en/overview)
-
-- 🚨 [Troubleshooting](https://deco.cx/docs/en/reference/troubleshooting)
-
-- 🔤 [Glossary](https://deco.cx/glossary)
-
-- 👥 [Discord](https://deco.cx/discord)
-
-## Contributing
-
-We are working on the instructions, for now feel free to contribute to this project.
-
-Take a look on this ones:
-- [deco](https://github.com/deco-cx/deco/)
-- [apps](https://github.com/deco-cx/apps/)
+<img src="./docs/macro_folder_atchitecture.jpeg" alt="arquitetura de pastas" />
