@@ -11,7 +11,7 @@ export function SelectedImage(props: SelectedImageProps) {
             <Image
                 id="selectedImage"
                 height={100}
-                width={30}
+                width={100}
                 src={props.image}
                 alt={props.alt}
                 className="h-full w-full object-cover object-center"
