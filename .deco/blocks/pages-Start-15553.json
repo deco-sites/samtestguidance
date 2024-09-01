@@ -1,5 +1,4 @@
 {
-  "name": "Home",
   "path": "/",
   "sections": [
     {
@@ -39,5 +38,6 @@
       }
     }
   ],
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Camisa do Galo"
 }
