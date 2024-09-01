@@ -8,6 +8,7 @@ import * as $features_Cart_signals from "./islands/features/Cart/signals.ts";
 import * as $features_Header_HeaderCartButton from "./islands/features/Header/HeaderCartButton.tsx";
 import * as $features_Header_MobileDrawer from "./islands/features/Header/MobileDrawer.tsx";
 import * as $features_Product_AddToCartButton from "./islands/features/Product/AddToCartButton.tsx";
+import * as $features_Product_ShareToWhatsAppButton from "./islands/features/Product/ShareToWhatsAppButton.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -22,6 +23,8 @@ const manifest = {
     "./islands/features/Header/MobileDrawer.tsx": $features_Header_MobileDrawer,
     "./islands/features/Product/AddToCartButton.tsx":
       $features_Product_AddToCartButton,
+    "./islands/features/Product/ShareToWhatsAppButton.tsx":
+      $features_Product_ShareToWhatsAppButton,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
